@@ -1,16 +1,28 @@
-import {router} from "./router.js";
+import { aboutUsPage } from "./about-us-page.js";
+import { catalogPage } from "./catalog-page.js";
+import { errorPage } from "./error-page.js";
+import { layout } from "./layout.js";
+import { router } from "./router.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-    const rootElem = document.querySelector("#app");
+    const rootElem = document.querySelector("#root");
 
-    const link = document.createElement("a");
-    link.setAttribute("href", "#/product");
-    link.textContent = "#/product";
+    rootElem.appendChild(layout());
 
-    link.addEventListener("click", function (event) {
-        console.log(router);
+    router({
+        routes: [
+            {
+                path: "/",
+                component: catalogPage
+            },
+            {
+                path: "/aboutUs",
+                component: aboutUsPage
+            }
+        ],
+        rootElementSelector: ".layout-child",
+        errorPage: errorPage
     });
 
     rootElem.appendChild(link);
-    // comment
 });

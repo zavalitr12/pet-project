@@ -13,6 +13,7 @@ module.exports = {
         static: {
             directory: path.join(__dirname, 'dist'),
         },
+        historyApiFallback: true,
         watchFiles: path.join(__dirname, 'src'),
         port: 9000,
     },
