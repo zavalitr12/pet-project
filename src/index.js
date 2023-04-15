@@ -12,4 +12,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     rootElem.appendChild(link);
+    // comment
 });
