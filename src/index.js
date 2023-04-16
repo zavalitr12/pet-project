@@ -1,5 +1,7 @@
+import "./style.css";
+
 import { aboutUsPage } from "./about-us-page.js";
-import { catalogPage } from "./catalog-page.js";
+import { catalogPage } from "./catalog-page/catalog-page.js";
 import { errorPage } from "./error-page.js";
 import { layout } from "./layout.js";
 import { router } from "./router.js";
@@ -23,6 +25,4 @@ document.addEventListener("DOMContentLoaded", function () {
         rootElementSelector: ".layout-child",
         errorPage: errorPage
     });
-
-    rootElem.appendChild(link);
 });
