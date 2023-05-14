@@ -1,0 +1,249 @@
+.dashboard__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard__createTask {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 10px 8px;
+    font-size: 15px;
+}
+.dashboard__createTask:hover {
+    background: #1d49aa;
+}
+
+.dashboard__header-name {
+    height: 20px;
+    width: 100%;
+    border: 2px solid gray;
+}
+
+.user-item__columns-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-item__column-item {
+    min-height: 200px;
+    min-width: 300px;
+    width: 100%;
+    background-color: rgb(215, 215, 215);
+    border: 4px solid white;
+}
+
+.column-item__card {
+    height: 180px;
+    width: 100%;
+    margin-bottom: 4px;
+    border-radius: 30px;
+    border: 2px solid #4676D7;
+}
+
+.column-item__card.column-item__card-moving {
+    position: absolute;
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgba(255, 0, 0, 0.271);
+}
+
+.column-item__card.column-item__card-moving:before {
+    position: absolute;
+    top: 40%;
+    font-family: cursive;
+    font-weight: 600;
+    font-stretch: normal;
+    content: "Поместите карточку в поле...";
+  }
+
+.cardName {
+    height: 20px;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 15px;
+}
+
+.cardName:hover {
+    background: #1d49aa;
+}
+
+.body__boxCreateTask {
+    width: 600px;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -150px;
+    z-index: 1000;
+    opacity: 1;
+    border-radius: 10px;
+    box-shadow: 0px -5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.closeBox {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid #337AB7;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.closeBox:before {
+    content: '+';
+    color: #337AB7;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(45deg);
+    font-size: 40px;
+    font-weight: 600;
+    top: -30px;
+    left: -1px;
+    line-height: 2;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+
+.closeBox:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background: red;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+    transform: scale(0.01);
+}
+
+.closeBox:hover {
+    border: 2px solid #fff;
+}
+
+.closeBox:hover:after {
+    transform: scale(1);
+}
+
+.closeBox:hover:before {
+    transform: scale(0.8) rotate(45deg);
+    color: #fff;
+}
+
+.box-create-task__push-create {
+    top: 86%;
+    left: 82%;
+    position: absolute;
+    display: flex;
+    height: 35px;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+.box-create-task__push-create:hover {
+    background: #1d49aa;
+}
+
+.box-create-task__push-create:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+.boxCreateTaskContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+.nameTask {
+    width: 500px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+.descriptionTask {
+    width: 500px;
+    height: 80px;
+    resize: none;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+.assigneeTask {
+    width: 500px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+.fieldError {
+    display: block;
+    text-align: left;
+    color: red;
+}
+
+.taskModal {
+    width: 600px;
+    height: 250px;
+    background-color: blue;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -125px;
+    z-index: 1000;
+    opacity: 1;
+}
+
+.taskModalContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+.task-form__form-item {
+    margin: 10px 5px;
+}
+
+.task-form {
+    padding: 20px;
+}
+
+.statusForm0 {
+    background-color: #0051ff;
+}
+
+.statusForm1 {
+    background-color: #c3ff00;
+}
+
+.statusForm2 {
+    background-color: #33ff00;
+}

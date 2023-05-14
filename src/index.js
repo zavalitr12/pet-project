@@ -1,7 +1,7 @@
 import "./style.css";
 
 import { aboutUsPage } from "./about-us-page.js";
-import { catalogPage } from "./catalog-page/catalog-page.js";
+import { dashboardPage } from "./dashboard-page/dashboard-page.js";
 import { errorPage } from "./error-page.js";
 import { layout } from "./layout.js";
 import { router } from "./router.js";
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         routes: [
             {
                 path: "/",
-                component: catalogPage
+                component: dashboardPage
             },
             {
                 path: "/aboutUs",
